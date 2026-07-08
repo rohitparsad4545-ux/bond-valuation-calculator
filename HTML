@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bond Valuation Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Bond Valuation Calculator</h1>
+        <p>Professional Fixed Income Analytics Dashboard</p>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+
+        <!-- Left Panel -->
+        <section class="card input-card">
+
+            <h2>Bond Inputs</h2>
+
+            <div class="input-group">
+                <label>Face Value</label>
+                <input type="number" id="faceValue">
+            </div>
+
+            <div class="input-group">
+                <label>Coupon Rate (%)</label>
+                <input type="number" id="couponRate">
+            </div>
+
+            <div class="input-group">
+                <label>Yield to Maturity (%)</label>
+                <input type="number" id="ytm">
+            </div>
+
+            <div class="input-group">
+                <label>Clean Price</label>
+                <input type="number" id="cleanPrice">
+            </div>
+
+            <div class="input-group">
+                <label>Years to Maturity</label>
+                <input type="number" id="years">
+            </div>
+
+            <div class="input-group">
+                <label>Coupon Frequency</label>
+
+                <select id="frequency">
+
+                    <option value="1">Annual</option>
+
+                    <option value="2" selected>Semi-Annual</option>
+
+                    <option value="4">Quarterly</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- Right Panel -->
+
+        <section class="card results-card">
+
+            <h2>Results</h2>
+
+            <div class="result-box">
+                Bond Price
+            </div>
+
+            <div class="result-box">
+                Dirty Price
+            </div>
+
+            <div class="result-box">
+                Current Yield
+            </div>
+
+            <div class="result-box">
+                Annual Coupon
+            </div>
+
+            <div class="result-box">
+                Periodic Coupon
+            </div>
+
+            <div class="result-box">
+                Periodic Yield
+            </div>
+
+            <div class="result-box">
+                Macaulay Duration
+            </div>
+
+            <div class="result-box">
+                Modified Duration
+            </div>
+
+            <div class="result-box">
+                Convexity
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Charts -->
+
+    <section class="charts">
+
+        <div class="chart-card">
+
+            <h2>Cash Flow Timeline</h2>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h2>Price vs YTM</h2>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h2>Duration Gauge</h2>
+
+        </div>
+
+    </section>
+
+    <!-- Sensitivity Analysis -->
+
+    <section class="table-card">
+
+        <h2>Sensitivity Analysis</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Yield Change</th>
+
+                    <th>Estimated Price</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="sensitivityTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        Bond Valuation Calculator © 2026
+
+    </footer>
+
+</body>
+
+</html>
